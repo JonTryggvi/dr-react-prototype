@@ -1,0 +1,4 @@
+.sidebar-container {
+  width: 300px;
+  min-height: calc(100vh - 130px);
+  background-color: chocolate; }

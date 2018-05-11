@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: burlywood; }
+  header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none; }
