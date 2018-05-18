@@ -2,15 +2,38 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: burlywood; }
+  background-color: #262626; }
   header .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%; }
+    width: 100vw;
+    height: 80px; }
+    header .header-inner .logo-link {
+      width: 80px;
+      height: 80px; }
+      header .header-inner .logo-link img {
+        width: 80px;
+        height: 80px; }
+    header .header-inner .nav {
+      width: 55vw;
+      margin: 0 30px; }
+    header .header-inner ul li a {
+      height: 80px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 10px;
+      display: flex;
+      align-items: center; }
+    header .header-inner .btn-log-ud {
+      background-color: #000000; }
 
 .nav {
+  height: 80px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
   list-style: none; }
