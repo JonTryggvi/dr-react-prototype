@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Gibson';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('Gibson'),
+      url(./fonts/Gibson-Regular.otf) format('opentype'),
+}
+@font-face {
+    font-family: 'Gibson';
+    font-style: normal;
+    font-weight: 300;
+    src:
+      local('Gibson Light'),
+      local('Gibson-Light'),
+      url(./fonts/Gibson-Light.otf) format('opentype'),
+}
+  
+  @font-face {
+    font-family: 'Gibson';
+    font-style: normal;
+    font-weight: 600;
+    src:
+      local('Gibson Semibold'),
+      local('Gibson-Semibold'),
+      url(./fonts/Gibson-Semibold.otf) format('opentype'),
+  }
+  
+  html {
+    font-family: 'Gibson', sans-serif;
+  }
+  
