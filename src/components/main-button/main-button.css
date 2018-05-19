@@ -1,0 +1,18 @@
+button {
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid tomato;
+  color: tomato;
+  margin: 5px;
+  font-size: 1rem;
+  min-width: 120px;
+  height: 44px;
+  transition: all 400ms ease; }
+  button:hover {
+    cursor: pointer;
+    background-color: tomato;
+    border: 4px dotted white;
+    color: white;
+    text-transform: uppercase; }
+  button:focus, button:active {
+    outline: none; }

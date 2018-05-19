@@ -7,17 +7,8 @@ import Sidebar from './components/sidebar/sidebar';
 import Home from './containers/home/home';
 import Video from './containers/video/video';
 
-
-
-
-/* Products component */
-// const Sidebar = () => (
-//   <div>
-//     <h2>Sidebar</h2>
-//   </div>
-// )
-
 class App extends Component {
+  
   render() {
     return (
       <div className="app-container">
