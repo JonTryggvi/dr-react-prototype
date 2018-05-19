@@ -10,3 +10,9 @@
   .app-container .view-container {
     display: flex;
     min-height: 70vh; }
+
+    .theFilter{
+      width: 100%;
+      position: absolute;
+      top: 80px;
+    }
