@@ -35,7 +35,7 @@ class Footer extends Component {
             <ul className="section-list">
               <li><Link to="/tv-oversigten">TV-oversigten</Link></li>
               <li><Link to="/tv-programmer">TV-programmer</Link></li>
-              <li><Link to="/se-live-tv" className="liIcon"><img src={require('./images/liveTv.svg')} alt=""/><span>Se live TV</span></Link></li>
+              <li><Link to="/se-live-tv" className="liIcon"><img src={require('./images/liveTv.svg')} alt=""/>Se live TV</Link></li>
               <li><Link to="/born">Børn</Link></li>
               <li><Link to="/Hor-radio" className="liIcon"><img src={require('./images/radio.svg')} alt=""/>Hør radio</Link></li>
             </ul>

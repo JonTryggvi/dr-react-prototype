@@ -11,7 +11,9 @@
     text-decoration: none;
     text-transform: uppercase;
     float: right;
-    margin: 15px; }
+    margin: 15px;
+    display: flex;
+    align-items: center; }
     .sidebar-container .skjult-menu img {
       margin-left: 10px; }
   .sidebar-container .user-info {
@@ -23,13 +25,15 @@
     .sidebar-container .user-info h2 {
       color: #ffffff;
       font-size: 20px;
+      font-weight: 600;
       text-align: center; }
     .sidebar-container .user-info .follow {
       display: flex;
       margin-bottom: 20px;
       flex-direction: row;
       justify-content: space-around;
-      color: #ffffff; }
+      color: #ffffff;
+      font-weight: 600; }
       .sidebar-container .user-info .follow .follow-item {
         display: flex;
         align-items: center;
@@ -43,7 +47,8 @@
     margin-top: 15px; }
     .sidebar-container .section h3 {
       font-size: 18px;
-      margin-left: 15px; }
+      margin-left: 15px;
+      font-weight: 600; }
     .sidebar-container .section .section-list {
       list-style-type: none;
       padding: 0; }
@@ -55,14 +60,21 @@
         align-items: center;
         margin-top: 5px;
         margin-bottom: 5px; }
-      .sidebar-container .section .section-list .sectionActive {
-        background-color: #1A1A1A; }
+        .sidebar-container .section .section-list li .iconYellow {
+          display: none; }
+        .sidebar-container .section .section-list li:hover {
+          background-color: #1A1A1A; }
+          .sidebar-container .section .section-list li:hover .iconYellow {
+            display: block; }
+          .sidebar-container .section .section-list li:hover .sidebarIcon {
+            display: none; }
       .sidebar-container .section .section-list li a {
         font-size: 20px;
         font-weight: 400;
         text-decoration: none;
         color: #ffffff;
-        margin-left: 28px; }
+        margin-left: 28px;
+        display: flex; }
         .sidebar-container .section .section-list li a img {
           margin-right: 20px; }
   .sidebar-container .ny {
