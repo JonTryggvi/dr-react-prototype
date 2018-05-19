@@ -2,12 +2,25 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.css';
 class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
   render() {
     return (
 
-      <nav className="sidebar-container">
-        <div className="skjult-menu">Skjult menu<img src={require('./images/closeMenu.png')} alt=""/></div>
-        <div className="inner-content">
+      <nav className={this.state.isToggleOn ? 'sidebar-container' : 'sidebar-container-small'}>
+        <div className="skjult-menu" onClick={this.handleClick}><span>{this.state.isToggleOn ? 'Skjult menu' : 'Åbne menu'}</span><img src={require('./images/closeMenu.png')} alt=""/></div>
+        <div className={this.state.isToggleOn ? 'showContent' : 'hideContent'}>
           <div className="user-info">
             <img src={require('./images/user.png')} alt="user picture"/>
             <h2>Katrín Sigurðardóttir</h2>
@@ -25,22 +38,22 @@ class Sidebar extends Component {
           <div className="section">
             <h3>Library</h3>
             <ul className="section-list">
-              <li><Link to="/kigger-pa-nu"><img src={require('./images/heart.svg')} alt=""/> Kigger pa nu</Link></li>
-              <li><Link to="/for-nylig-set"><img src={require('./images/heart.svg')} alt=""/> For nylig set</Link></li>
-              <li><Link to="/anbefalet"><img src={require('./images/heart.svg')} alt=""/> Anbefalet</Link></li>
-              <li className="sectionActive"><Link to="/nye-trailere"><img src={require('./images/heartYellow.svg')} alt=""/> Nye trailere</Link></li>
-              <li><Link to="/kommer-snart"><img src={require('./images/heart.svg')} alt=""/> Kommer snart</Link></li>
+              <li><Link to="/kigger-pa-nu"><img src={require('./images/heart.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/heartYellow.svg')} alt="" className="hoverIcon"/>Kigger pa nu</Link></li>
+              <li><Link to="/for-nylig-set"><img src={require('./images/heart.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/heartYellow.svg')} alt="" className="hoverIcon"/>For nylig set</Link></li>
+              <li><Link to="/anbefalet"><img src={require('./images/heart.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/heartYellow.svg')} alt="" className="hoverIcon"/>Anbefalet</Link></li>
+              <li><Link to="/nye-trailere"><img src={require('./images/heart.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/heartYellow.svg')} alt="" className="hoverIcon"/>Nye trailere</Link></li>
+              <li><Link to="/kommer-snart"><img src={require('./images/heart.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/heartYellow.svg')} alt="" className="hoverIcon"/>Kommer snart</Link></li>
             </ul>
           </div>
           <div className="section">
             <h3>Collections</h3>
             <ul className="section-list">
-              <li><Link to="/kigger-pa-nu"><img src={require('./images/star.svg')} alt=""/> Favorit</Link></li>
-              <li><Link to="/for-nylig-set"><img src={require('./images/star.svg')} alt=""/> Olden goldies</Link></li>
-              <li><Link to="/anbefalet"><img src={require('./images/star.svg')} alt=""/> Chick Flicks</Link></li>
-              <li><Link to="/nye-trailere"><img src={require('./images/star.svg')} alt=""/>Splatter films</Link></li>
-              <li><Link to="/kommer-snart"><img src={require('./images/star.svg')} alt=""/> Anjas beste</Link></li>
-              <li><Link to="/kommer-snart"><img src={require('./images/star.svg')} alt=""/> Lars Von Trier</Link></li>
+              <li><Link to="/kigger-pa-nu"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Favorit</Link></li>
+              <li><Link to="/for-nylig-set"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Olden goldies</Link></li>
+              <li><Link to="/anbefalet"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Chick Flicks</Link></li>
+              <li><Link to="/nye-trailere"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Splatter films</Link></li>
+              <li><Link to="/kommer-snart"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Anjas beste</Link></li>
+              <li><Link to="/kommer-snart"><img src={require('./images/star.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/starYellow.svg')} alt="" className="hoverIcon"/>Lars Von Trier</Link></li>
             </ul>
           </div>
           <div className="ny">
@@ -50,8 +63,8 @@ class Sidebar extends Component {
           <div className="section">
             <h3>Your Account</h3>
             <ul className="section-list">
-              <li><Link to="/kigger-pa-nu"><img src={require('./images/profile.svg')} alt=""/> Min profile</Link></li>
-              <li><Link to="/for-nylig-set"><img src={require('./images/settings.svg')} alt=""/> Settings</Link></li>
+              <li><Link to="/kigger-pa-nu"><img src={require('./images/profile.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/profileWhite.svg')} alt="" className="hoverIcon"/>Min profile</Link></li>
+              <li><Link to="/for-nylig-set"><img src={require('./images/settings.svg')} alt="" className="sidebarIcon"/> <img src={require('./images/settingsWhite.svg')} alt="" className="hoverIcon"/>Settings</Link></li>
             </ul>
           </div>
         </div>
