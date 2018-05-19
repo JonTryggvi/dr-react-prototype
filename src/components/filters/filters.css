@@ -1,0 +1,75 @@
+.filter {
+  height: 500px;
+  background-color: #000000;
+  padding: 80px;
+  position: relative; }
+  .filter .firstSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .filter .firstSection h2 {
+      font-size: 36px;
+      color: #ffffff;
+      max-width: 150px;
+      margin-top: 0; }
+    .filter .firstSection span {
+      width: 900px;
+      height: 55px;
+      background-color: #ffffff;
+      border-left: 11px solid #FED324;
+      position: relative; }
+      .filter .firstSection span input {
+        width: 100%;
+        height: 53px;
+        border: none;
+        position: relative;
+        text-indent: 23px;
+        font-size: 16px;
+        outline: 0; }
+      .filter .firstSection span img {
+        height: 20px;
+        position: absolute;
+        top: 18px;
+        right: 28px; }
+  .filter .secoundSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .filter .secoundSection h3 {
+      color: #ffffff;
+      font-weight: 600; }
+    .filter .secoundSection ul {
+      padding-left: 0; }
+    .filter .secoundSection li {
+      width: 180px;
+      height: 55px;
+      padding-left: 28px;
+      display: flex;
+      align-items: center;
+      border-left: 11px solid #000000; }
+      .filter .secoundSection li a {
+        color: #ffffff;
+        text-decoration: none; }
+      .filter .secoundSection li:hover {
+        border-left: 11px solid #FED324;
+        background-color: #262626; }
+    .filter .secoundSection label {
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .filter .secoundSection .row {
+      display: flex;
+      flex-direction: row; }
+    .filter .secoundSection .column {
+      display: flex;
+      flex-direction: column; }
+    .filter .secoundSection .type-unsertext {
+      width: 270px; }
+      .filter .secoundSection .type-unsertext .row {
+        justify-content: space-between; }
+  .filter button {
+    position: absolute;
+    right: 90px;
+    bottom: 70px; }

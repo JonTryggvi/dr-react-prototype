@@ -8,7 +8,6 @@ class Footer extends Component {
         <div className="logo-search">
           <img src={require('./images/footerLogo.png')} alt=""/>
           <span><input type="text" placeholder="What are you looking for…"/><img src={require('./images/search.svg')} alt=""/></span>
-          
         </div>
         <div className="footer-sections">
           <div className="footer-section">

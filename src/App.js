@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
+import Filters from './components/filters/filters';
 import Sidebar from './components/sidebar/sidebar';
 import Home from './containers/home/home';
 import Video from './containers/video/video';
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <Header />
+        <Filters />
         <div className="view-container">
           <Sidebar />
           <Switch>
