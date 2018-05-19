@@ -14,7 +14,8 @@ class App extends Component {
     return (
       <div className="app-container">
         <Header />
-        <Filters />
+        <div className="theFilter"><Filters /></div>
+        
         <div className="view-container">
           <Sidebar />
           <Switch>
