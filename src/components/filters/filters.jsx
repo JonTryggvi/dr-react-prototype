@@ -34,7 +34,6 @@ class Filters extends Component {
                 <li><Link to="/navn">Navn</Link></li>
                 <li><Link to="/ratings">Ratings</Link></li>
                 <li><Link to="/udgivelsesdato">Udgivelsesdato</Link></li>
-                <li></li>
               </ul>
             </div>
             <div>
