@@ -4,10 +4,25 @@ import Nouislider from 'react-nouislider';
 import './filters.css';
 import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.filterClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
   render() {
    
     return (
-      <div className="filter">
+      <div className={this.state.isToggleOn ? 'filter' : 'filterClosed'}>
+        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjult' : ''}</span></div>
         <div className="firstSection">
           <h2>Find dit program!</h2>
           <span><input type="text" placeholder="What are you looking for…"/><img src={require('./images/search.svg')} alt=""/></span>
@@ -19,7 +34,7 @@ class Filters extends Component {
                 <li><Link to="/navn">Navn</Link></li>
                 <li><Link to="/ratings">Ratings</Link></li>
                 <li><Link to="/udgivelsesdato">Udgivelsesdato</Link></li>
-                <li><Link to="/my-dr-tv-bedommelse">My DR TV  bedømmelse</Link></li>
+                <li></li>
               </ul>
             </div>
             <div>

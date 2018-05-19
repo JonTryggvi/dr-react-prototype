@@ -1,8 +1,18 @@
+.filterClosed{
+  display: none;
+}
 .filter{
   height: 500px;
   background-color: #000000;
   padding: 80px;
   position: relative;
+  .skjult{
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
   .firstSection{
     width: 100%;
     display: flex;
