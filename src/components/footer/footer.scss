@@ -1,4 +1,71 @@
 footer {
-  background-color: aquamarine;
+  background-color: #262626;
   min-height: 300px;
+  color: #ffffff;
+  padding: 80px;
+  .logo-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    span{
+      width: 900px;
+      height: 55px;
+      background-color: #ffffff;
+      border-left: 11px solid #FED324;
+      position: relative;
+      img{
+        height: 20px;
+        position: absolute;
+        top: 18px;
+        right: 28px;
+      }
+    }
+    input{
+      width: 100%;
+      height: 53px;
+      border: none;
+      position: relative;
+      text-indent: 23px;
+      font-size: 16px;
+      outline: 0;
+    }
+  }
+  .footer-sections{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h3{
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .liIcon{
+      display: flex;
+      align-items: center;
+    }
+    .aboutDr{
+      font-weight: 400;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+      li{
+        padding: 5px 0;
+        font-size: 14px;
+        img{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  .contact{
+    color: #FED324 !important;
+    text-decoration: underline;
+  }
 }
