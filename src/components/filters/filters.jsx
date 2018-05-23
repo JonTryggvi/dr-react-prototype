@@ -15,20 +15,23 @@ class Filters extends Component {
   }
 
   handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
-    // console.log(this.props);
+    this.setState({
+      isToggleOn: false
+    });
+
+    // this.sendToFilter.isToggleOn = false; 
+    console.log(this.state);
   }
 
   render() {
-    const { sendToFilter } = this.props;
+    const { sendToFilter, closeFromFilter } = this.props;
     
     // console.log(sendToFilter);
     
     return (
       <div className={ sendToFilter.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjult' : ''}</span></div>
+        <div className="skjult" onClick={() => closeFromFilter(false)}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div>
+        
         <div className="firstSection">
           <h2>Find dit program!</h2>
           <span><input type="text" placeholder="What are you looking for…"/><img src={require('./images/search.svg')} alt=""/></span>

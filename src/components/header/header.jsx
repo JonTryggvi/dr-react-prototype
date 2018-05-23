@@ -9,7 +9,7 @@ class Header extends Component {
   }
   render() {
     const { callbackFromParent } = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     
     return (
       <header>

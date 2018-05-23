@@ -18,6 +18,7 @@ class App extends Component {
       isToggleOn: false
     };
     this.headerSpyglassClick = this.headerClick.bind(this);
+    this.filterclose = this.filterClick.bind(this);
   }
 
    headerClick(dataFromChild) {
@@ -25,9 +26,13 @@ class App extends Component {
      this.setState(prevState => ({
        isToggleOn: !prevState.isToggleOn
      }));
-     
-     
+
    }
+  filterClick(dataFromChild) {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
  
   componentDidMount() {
     fetch('http://localhost:1981/api/trailer/1', {
@@ -51,7 +56,7 @@ class App extends Component {
       <div className="app-container">
         <Header callbackFromParent={this.headerSpyglassClick} />
         <div className="theFilter">
-          <Filters sendToFilter = {this.state} />
+          <Filters sendToFilter={this.state} closeFromFilter={ this.filterclose} />
         </div>
         
         <div className="view-container">
