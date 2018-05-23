@@ -96,9 +96,11 @@
       width: 320px; }
       .filter .secoundSection .type-unsertext .row {
         justify-content: space-between; }
+
     .filter .secoundSection .slider {
       max-width: 320px;
       width: 100%;
+
       margin-top: 20px; }
       .filter .secoundSection .slider img {
         width: 100%; }

@@ -18,26 +18,33 @@ header {
       }
     }
     .nav{
-      width: 55vw;
-      margin: 0 30px;
+      width: 740px;
     }
-    ul li a{
-      height: 80px;
-      color: #ffffff;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      &:hover{
-        background-color: #FED324;
-        color: #000000;
-      }
+    ul li {
+      min-width: 110px;
+      a{
+        height: 80px;
+        margin: 0 auto;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: all 100ms ease-in-out;
+          &:hover{
+          background-color: #FED324;
+          color: #000000;
+        }
+      } 
     }
     .btn-log-ud{
       background-color: #000000;
+    }
+    .btn-log-search {
+      min-width: 80px;
     }
   }
 }

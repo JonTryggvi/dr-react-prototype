@@ -23,7 +23,9 @@ class Header extends Component {
               <li><Link to="/">Nyt</Link></li>
               <li><Link to="/">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
-              <li onClick={() => callbackFromParent(true)}><a><img src={require('./search.svg')} alt=""/></a></li>
+
+              <li className="btn-log-search" onClick={() => callbackFromParent(true)}><img src={require('./search.svg')} alt=""/></li>
+
             </ul>
           </nav>
         </div>  
