@@ -2,12 +2,38 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import MainButton from '../../components/main-button/main-button';
 import './video.css';
-const Video = ({ match }) => {
+
+
+
+
+const Video = ({ match, dataFromApp }) => {
+  // console.log(match);
+  let arr = [];
+ let tst = fetch('http://localhost:1981/api/trailer/1', {
+    method: 'GET', headers: {
+      'Accept': 'application/json'
+
+    }
+  }).then(data => {
+    if (data.ok) {
+      return data.json().then(json => {
+        
+        arr = [... json]
+       return
+      })
+     
+    }
+   });
+  console.log(tst);
+  
+  
   let btnOnClickFunction = function(message) {
     console.log(message);
     
   }
-
+  
+  
+   
   return (
     <div className="video-container">
       <h1>Video</h1>
