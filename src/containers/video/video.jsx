@@ -18,13 +18,13 @@ const Video = ({ match, dataFromApp }) => {
     if (data.ok) {
       return data.json().then(json => {
         
-        arr = [... json]
-       return
+        arr = arr.push(json)
+        return arr
       })
      
     }
    });
-  console.log(tst);
+  console.log(arr);
   
   
   let btnOnClickFunction = function(message) {

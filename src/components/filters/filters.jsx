@@ -6,8 +6,10 @@ import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
-
+    this.state = this.props;
+    
+    console.log(this.state);
+    
     // This binding is necessary to make `this` work in the callback
     this.filterClick = this.handleClick.bind(this);
   }
@@ -16,12 +18,16 @@ class Filters extends Component {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
+    // console.log(this.props);
   }
 
   render() {
-   
+    const { sendToFilter } = this.props;
+    
+    // console.log(sendToFilter);
+    
     return (
-      <div className={this.state.isToggleOn ? 'filter' : 'filterClosed'}>
+      <div className={ sendToFilter.isToggleOn ? 'filter' : 'filterClosed'}>
         <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjult' : ''}</span></div>
         <div className="firstSection">
           <h2>Find dit program!</h2>
