@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import MainButton from '../../components/main-button/main-button';
-import './home.css';
+import './programme.css';
 
-// console.log(htmlthing);
-class Home extends Component {
-
-
-  
+class Programme extends Component {
   render() {
     let iWorkTo = (message) => console.log(message);
     return (
-      <div className="home-container">
-        <img src={require('./images/screenContent1.jpg')} alt=""/>
+      <div className="programme-container">
+        <img src={require('./images/screenContent3.jpg')} alt=""/>
         {/* <MainButton onPress={() => iWorkTo('i work as well')} buttonText={'This is my home button'} /> */}
       </div>
     )
   }
 }
 
-export default Home;
+export default Programme;

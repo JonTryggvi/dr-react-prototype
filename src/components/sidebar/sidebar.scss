@@ -64,7 +64,7 @@
     h2{
       color: #ffffff;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
     }
     .follow{
@@ -79,9 +79,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-      }
-      strong{
-        font-size: 26px;
+        p {
+          color: #949494;
+        }
+        span .followCount {
+          font-weight: 600;
+          font-size: 26px;
+        }
       }
     }
   }
