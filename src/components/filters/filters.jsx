@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Nouislider from 'react-nouislider';
+// import Nouislider from 'react-nouislider';
 import './filters.css';
 import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
@@ -31,7 +31,7 @@ class Filters extends Component {
             <div>
               <h3>Sorter erfter</h3>
               <ul className="section-list">
-                <li><Link to="/navn">Navn</Link></li>
+                <li className="namefilter"><Link to="/navn">Navn</Link></li>
                 <li><Link to="/ratings">Ratings</Link></li>
                 <li><Link to="/udgivelsesdato">Udgivelsesdato</Link></li>
               </ul>
@@ -39,35 +39,70 @@ class Filters extends Component {
             <div>
               <h3>Genre</h3>
               <div className="row">
-                <div className="column">
-                  <label htmlFor="drama"><input type="checkbox" name="drama" value="drama" /> Drama</label>
-                  <label htmlFor="documentar"><input type="checkbox" name="documentar" value="documentar" /> Documentar</label>
-                  <label htmlFor="kultur"><input type="checkbox" name="kultur" value="kultur" /> Kultur</label>
-                  <label htmlFor="natur-viden"><input type="checkbox" name="natur-viden" value="natur-viden" /> Natur & viden</label>
-                  <label htmlFor="nyheder-aktualitet"><input type="checkbox" name="nyheder-aktualitet" value="nyheder-aktualitet" /> Nyheder & aktualitet</label>
-                  <label htmlFor="sport"><input type="checkbox" name="sport" value="sport" /> Sport</label>
-                  <label htmlFor="underholdning"><input type="checkbox" name="underholdning" value="underholdning" /> Underholdning</label>
+                <div className="column firstColumn">
+                  <input id="c1" type="checkbox" name="drama" value="drama" />
+                  <label htmlFor="drama" for="c1"><span></span>Drama</label>
+
+                  <input id="c2" type="checkbox" name="kultur" value="kultur" />
+                  <label htmlFor="kultur" for="c2"><span></span>Kultur</label>
+
+                  <input id="c3" type="checkbox" name="natur-viden" value="natur-viden" />
+                  <label htmlFor="natur-viden" for="c3"><span></span>Natur & viden</label>
+
+                  <input id="c4" type="checkbox" name="nyheder-aktualitet" value="nyheder-aktualitet" />
+                  <label htmlFor="nyheder-aktualitet" for="c4"><span></span>Nyheder</label>
+
+                  <input id="c5" type="checkbox" name="sport" value="sport" />
+                  <label htmlFor="sport" for="c5"><span></span>Sport</label>
+
+                  <input id="c6" type="checkbox" name="underholdning" value="underholdning" />
+                  <label htmlFor="underholdning" for="c6"><span></span>Underholdning</label>
                 </div>
+
                 <div className="column">
-                  <label htmlFor="drama"><input type="checkbox" name="romance" value="romance" /> Romance</label>
-                  <label htmlFor="documentar"><input type="checkbox" name="action" value="action" /> Action</label>
-                  <label htmlFor="kultur"><input type="checkbox" name="family" value="family" /> Family</label>
-                  <label htmlFor="natur-viden"><input type="checkbox" name="comedie" value="comedie" /> Comedie</label>
-                  <label htmlFor="nyheder-aktualitet"><input type="checkbox" name="nyheder-aktualitet" value="sci-fi-fantasy" /> Sci-Fi & Fantasy</label>
-                  <label htmlFor="sport"><input type="checkbox" name="thrillers" value="thrillers" /> Thrillers</label>
-                  <label htmlFor="underholdning"><input type="checkbox" name="musicals" value="musicals" /> Musicals</label>
+                  <input id="c7" type="checkbox" name="romance" value="romance" />
+                  <label htmlFor="romance" for="c7"><span></span>Romance</label>
+
+                  <input id="c8" type="checkbox" name="action" value="action" />
+                  <label htmlFor="action" for="c8"><span></span>Action</label>
+
+                  <input id="c9" type="checkbox" name="family" value="family" />
+                  <label htmlFor="family" for="c9"><span></span>Family</label>
+
+                  <input id="c10" type="checkbox" name="comedie" value="comedie" />
+                  <label htmlFor="comedie" for="c10"><span></span>Comedie</label>
+
+                  <input id="c11" type="checkbox" name="scifi" value="scifi" />
+                  <label htmlFor="scifi" for="c11"><span></span>Sci-Fi</label>
+
+                  <input id="c12" type="checkbox" name="thrillers" value="thrillers" />
+                  <label htmlFor="thrillers" for="c12"><span></span>Thrillers</label>
+
+                  <input id="c13" type="checkbox" name="musicals" value="musicals" />
+                  <label htmlFor="musicals" for="c13"><span></span>Musicals</label>
                 </div>
               </div>
             </div>
             <div>
               <h3>Kanal</h3>
               <div className="column">
-                <label htmlFor="drama"><input type="checkbox" name="dr1" value="dr1" /> DR 1</label>
-                <label htmlFor="documentar"><input type="checkbox" name="dr2" value="dr2" /> DR 2</label>
-                <label htmlFor="kultur"><input type="checkbox" name="dr3" value="dr3" /> DR 3</label>
-                <label htmlFor="natur-viden"><input type="checkbox" name="drk" value="drk" /> DR K</label>
-                <label htmlFor="nyheder-aktualitet"><input type="checkbox" name="ramasjang" value="ramasjang" /> Ramasjang</label>
-                <label htmlFor="sport"><input type="checkbox" name="ultra" value="ultra" /> Ultra</label>
+                <input id="c14" type="checkbox" name="dr1" value="dr1" />
+                <label htmlFor="dr1" for="c14"><span></span>DR 1</label>
+
+                <input id="c15" type="checkbox" name="dr2" value="dr2" />
+                <label htmlFor="dr2" for="c15"><span></span>DR 2</label>
+
+                <input id="c16" type="checkbox" name="dr3" value="dr3" />
+                <label htmlFor="dr3" for="c16"><span></span>DR 3</label>
+
+                <input id="c17" type="checkbox" name="drk" value="drk" />
+                <label htmlFor="drk" for="c17"><span></span>DR K</label>
+
+                <input id="c18" type="checkbox" name="ramasjang" value="ramasjang" />
+                <label htmlFor="ramasjang" for="c18"><span></span>Ramasjang</label>
+
+                <input id="c19" type="checkbox" name="ultra" value="ultra" />
+                <label htmlFor="ultra" for="c19"><span></span>Ultra</label>
               </div>
             </div>
             <div className="column type-unsertext">
@@ -75,25 +110,29 @@ class Filters extends Component {
                 <div>
                   <h3>Type</h3>
                   <div className="column">
-                    <label htmlFor="drama"><input type="checkbox" name="romance" value="romance" /> Romance</label>
-                    <label htmlFor="documentar"><input type="checkbox" name="action" value="action" /> Action</label>
-                  </div>
+                    <input id="c20" type="checkbox" name="serie" value="serie" />
+                    <label htmlFor="serie" for="c20"><span></span>Serie</label>
+
+                    <input id="c21" type="checkbox" name="film" value="film" />
+                    <label htmlFor="film" for="c21"><span></span>Film</label>
+                   </div>
                 </div>
                 <div>
                   <h3>Undertext</h3>
                   <div className="column">
-                    <label htmlFor="drama"><input type="checkbox" name="ja" value="ja" /> Ja</label>
-                    <label htmlFor="documentar"><input type="checkbox" name="nej" value="nej" /> Nej</label>
+                    <input id="c22" type="checkbox" name="ja" value="ja" />
+                    <label htmlFor="ja" for="c22"><span></span>Ja</label>
+
+                    <input id="c23" type="checkbox" name="nei" value="nei" />
+                    <label htmlFor="nei" for="c23"><span></span>Nei</label>
                   </div>
                 </div>
               </div>
               <div>
                 <h3>År</h3>
-                <Nouislider
-                  range={{min: 0, max: 200}}
-                  start={[0, 100]}
-                  tooltips
-                />
+                <div className="slider">
+                  <img src={require('./images/sliderPic.png')} alt=""/>
+                </div>
               </div>
             </div>
             

@@ -10,7 +10,7 @@ class Header extends Component {
           <Link className="logo-link" to="/"> <img src={require('./drTvLogo.png')} alt=""/> </Link>
           <nav className="navbar navbar-light">
             <ul className="nav navbar-nav">
-              <li><Link to="/programmer">Programmer</Link></li>
+              <li><Link to="/programmes">programmes</Link></li>
               <li><Link to="/live-TV">Live-TV</Link></li>
               <li><Link to="/TV-Guide">TV-Guide</Link></li>
               <li><Link to="/nyt-hos-os">Nyt hos os</Link></li>

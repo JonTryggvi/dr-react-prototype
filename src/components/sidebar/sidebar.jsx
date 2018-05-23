@@ -27,11 +27,11 @@ class Sidebar extends Component {
             <div className="follow">
               <div className="follow-item">
                 <p>following</p>
-                <strong>56</strong>
+                <span className="followCount">56</span>
               </div>
               <div className="follow-item">
                 <p>followers</p>
-                <strong>128</strong>
+                <span className="followCount">128</span>
               </div>
             </div>
           </div>
