@@ -18,10 +18,10 @@ class Header extends Component {
           <nav className="navbar navbar-light">
             <ul className="nav navbar-nav">
               <li><Link to="/programmes">programmes</Link></li>
-              <li><Link to="/live-TV">Live-TV</Link></li>
-              <li><Link to="/TV-Guide">TV-Guide</Link></li>
-              <li><Link to="/nyt-hos-os">Nyt</Link></li>
-              <li><Link to="/popular">Populært</Link></li>
+              <li><Link to="/">Live-TV</Link></li>
+              <li><Link to="/">TV-Guide</Link></li>
+              <li><Link to="/">Nyt</Link></li>
+              <li><Link to="/">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
 
               <li className="btn-log-search" onClick={() => callbackFromParent(true)}><img src={require('./search.svg')} alt=""/></li>
