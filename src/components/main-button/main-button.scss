@@ -7,6 +7,10 @@ button{
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
   &:focus, &:active {
     outline: none;
   }

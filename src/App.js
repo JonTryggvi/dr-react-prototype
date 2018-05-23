@@ -35,6 +35,8 @@ class App extends Component {
       isToggleOn: !prevState.isToggleOn
     }));
   }
+
+
  
   componentDidMount() {
     fetch('http://localhost:1981/api/trailer/1', {
@@ -66,7 +68,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/programmes" component={Programmes} />
-            <Route exact path="/programme" component={Programme} />
+            <Route sendToProgrammes={this.sendurl} exact path="/programme" component={Programme} />
             <Route path="/video" component={Video} />
           </Switch>
         </div>
