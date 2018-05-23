@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Nouislider from 'react-nouislider';
 import './filters.css';
 import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
@@ -22,17 +21,17 @@ class Filters extends Component {
    
     return (
       <div className={this.state.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjult' : ''}</span></div>
+        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjul' : ''}</span></div>
         <div className="firstSection">
-          <h2>Find dit program!</h2>
-          <span><input type="text" placeholder="What are you looking for…"/><img src={require('./images/search.svg')} alt=""/></span>
+          <h2>Find program!</h2>
+          <span><input type="text" placeholder="Hvad leder du efter…"/><img src={require('./images/search.svg')} alt=""/></span>
         </div>
         <div className="secoundSection">
             <div>
               <h3>Sorter erfter</h3>
               <ul className="section-list">
                 <li><Link to="/navn">Navn</Link></li>
-                <li><Link to="/ratings">Ratings</Link></li>
+                <li><Link to="/ratings">Bedømmelser</Link></li>
                 <li><Link to="/udgivelsesdato">Udgivelsesdato</Link></li>
               </ul>
             </div>
@@ -43,7 +42,7 @@ class Filters extends Component {
                   <label htmlFor="drama"><input type="checkbox" name="drama" value="drama" /> Drama</label>
                   <label htmlFor="documentar"><input type="checkbox" name="documentar" value="documentar" /> Documentar</label>
                   <label htmlFor="kultur"><input type="checkbox" name="kultur" value="kultur" /> Kultur</label>
-                  <label htmlFor="natur-viden"><input type="checkbox" name="natur-viden" value="natur-viden" /> Natur & viden</label>
+                  <label htmlFor="natur-viden"><input type="checkbox" name="natur-viden" value="natur-viden" /> Natur & videnskab</label>
                   <label htmlFor="nyheder-aktualitet"><input type="checkbox" name="nyheder-aktualitet" value="nyheder-aktualitet" /> Nyheder & aktualitet</label>
                   <label htmlFor="sport"><input type="checkbox" name="sport" value="sport" /> Sport</label>
                   <label htmlFor="underholdning"><input type="checkbox" name="underholdning" value="underholdning" /> Underholdning</label>
@@ -51,7 +50,7 @@ class Filters extends Component {
                 <div className="column">
                   <label htmlFor="drama"><input type="checkbox" name="romance" value="romance" /> Romance</label>
                   <label htmlFor="documentar"><input type="checkbox" name="action" value="action" /> Action</label>
-                  <label htmlFor="kultur"><input type="checkbox" name="family" value="family" /> Family</label>
+                  <label htmlFor="kultur"><input type="checkbox" name="family" value="family" /> Familie</label>
                   <label htmlFor="natur-viden"><input type="checkbox" name="comedie" value="comedie" /> Comedie</label>
                   <label htmlFor="nyheder-aktualitet"><input type="checkbox" name="nyheder-aktualitet" value="sci-fi-fantasy" /> Sci-Fi & Fantasy</label>
                   <label htmlFor="sport"><input type="checkbox" name="thrillers" value="thrillers" /> Thrillers</label>
@@ -89,11 +88,6 @@ class Filters extends Component {
               </div>
               <div>
                 <h3>År</h3>
-                <Nouislider
-                  range={{min: 0, max: 200}}
-                  start={[0, 100]}
-                  tooltips
-                />
               </div>
             </div>
             

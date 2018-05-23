@@ -13,8 +13,8 @@ class Header extends Component {
               <li><Link to="/programmer">Programmer</Link></li>
               <li><Link to="/live-TV">Live-TV</Link></li>
               <li><Link to="/TV-Guide">TV-Guide</Link></li>
-              <li><Link to="/nyt-hos-os">Nyt hos os</Link></li>
-              <li><Link to="/popular">Popular</Link></li>
+              <li><Link to="/nyt-hos-os">Nyt</Link></li>
+              <li><Link to="/popular">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
               <li><Link to="/log-ud"><img src={require('./search.svg')} alt=""/></Link></li>
             </ul>
