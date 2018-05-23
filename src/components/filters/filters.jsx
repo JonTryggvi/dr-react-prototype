@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Nouislider from 'react-nouislider';
 import './filters.css';
 import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
@@ -22,17 +21,18 @@ class Filters extends Component {
    
     return (
       <div className={this.state.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjult' : ''}</span></div>
+        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjul' : ''}</span></div>
         <div className="firstSection">
-          <h2>Find dit program!</h2>
-          <span><input type="text" placeholder="What are you looking for…"/><img src={require('./images/search.svg')} alt=""/></span>
+          <h2>Find program!</h2>
+          <span><input type="text" placeholder="Hvad leder du efter…"/><img src={require('./images/search.svg')} alt=""/></span>
         </div>
         <div className="secoundSection">
             <div>
               <h3>Sorter erfter</h3>
               <ul className="section-list">
                 <li className="namefilter"><Link to="/navn">Navn</Link></li>
-                <li><Link to="/ratings">Ratings</Link></li>
+                <li><Link to="/ratings">Bedømmelser</Link></li>
+
                 <li><Link to="/udgivelsesdato">Udgivelsesdato</Link></li>
               </ul>
             </div>
@@ -47,7 +47,7 @@ class Filters extends Component {
                   <label htmlFor="kultur" for="c2"><span></span>Kultur</label>
 
                   <input id="c3" type="checkbox" name="natur-viden" value="natur-viden" />
-                  <label htmlFor="natur-viden" for="c3"><span></span>Natur & viden</label>
+                  <label htmlFor="natur-viden" for="c3"><span></span>Natur & videnskab</label>
 
                   <input id="c4" type="checkbox" name="nyheder-aktualitet" value="nyheder-aktualitet" />
                   <label htmlFor="nyheder-aktualitet" for="c4"><span></span>Nyheder</label>
@@ -67,7 +67,7 @@ class Filters extends Component {
                   <label htmlFor="action" for="c8"><span></span>Action</label>
 
                   <input id="c9" type="checkbox" name="family" value="family" />
-                  <label htmlFor="family" for="c9"><span></span>Family</label>
+                  <label htmlFor="family" for="c9"><span></span>Familie</label>
 
                   <input id="c10" type="checkbox" name="comedie" value="comedie" />
                   <label htmlFor="comedie" for="c10"><span></span>Comedie</label>

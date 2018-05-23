@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import MainButton from '../../components/main-button/main-button';
 import './home.css';
 
+// console.log(htmlthing);
 class Home extends Component {
+
+
+  
   render() {
     let iWorkTo = (message) => console.log(message);
     return (

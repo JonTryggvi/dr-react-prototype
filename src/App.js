@@ -11,8 +11,29 @@ import Programme from './containers/programme/programme';
 import Video from './containers/video/video';
 
 class App extends Component {
-  
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hits: [],
+    };
+  }
+  componentDidMount() {
+    fetch('http://localhost:1981/api/trailer/1', {
+      method: 'GET', headers: {
+        'Accept': 'application/json'
+
+      }
+    }).then(data => {
+        if (data.ok) {
+          data.json().then(json => {
+            this.setState({ hits: json })
+          })
+        }
+      });
+    } 
+    
+    render() {
+     
     return (
       <div className="app-container">
         <Header />
