@@ -11,7 +11,8 @@
     text-transform: uppercase;
     position: absolute;
     top: 20px;
-    right: 20px; }
+    right: 20px;
+    z-index: 9999999; }
   .filter .firstSection {
     width: 100%;
     display: flex;

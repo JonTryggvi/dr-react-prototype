@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import './header.css';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  
+  }
   render() {
+    const { callbackFromParent } = this.props;
+    // console.log(this.props);
+    
     return (
       <header>
         <div className="header-inner">
@@ -16,15 +23,13 @@ class Header extends Component {
               <li><Link to="/nyt-hos-os">Nyt</Link></li>
               <li><Link to="/popular">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
-              <li><Link to="/log-ud"><img src={require('./search.svg')} alt=""/></Link></li>
+              <li onClick={() => callbackFromParent(true)}><a><img src={require('./search.svg')} alt=""/></a></li>
             </ul>
           </nav>
         </div>  
       </header>
-      
     )
   }
 }
-
 
 export default Header;
