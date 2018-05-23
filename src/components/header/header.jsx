@@ -16,7 +16,7 @@ class Header extends Component {
               <li><Link to="/nyt-hos-os">Nyt</Link></li>
               <li><Link to="/popular">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
-              <li><Link to="/log-ud"><img src={require('./search.svg')} alt=""/></Link></li>
+              <li className="btn-log-search"><Link to="/log-ud"><img src={require('./search.svg')} alt=""/></Link></li>
             </ul>
           </nav>
         </div>  
