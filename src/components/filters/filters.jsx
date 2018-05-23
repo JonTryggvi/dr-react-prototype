@@ -5,23 +5,33 @@ import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
-
+    this.state = this.props;
+    
+    console.log(this.state);
+    
     // This binding is necessary to make `this` work in the callback
     this.filterClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+    this.setState({
+      isToggleOn: false
+    });
+
+    // this.sendToFilter.isToggleOn = false; 
+    console.log(this.state);
   }
 
   render() {
-   
+    const { sendToFilter, closeFromFilter } = this.props;
+    
+    // console.log(sendToFilter);
+    
     return (
-      <div className={this.state.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={this.filterClick}><span>{this.state.isToggleOn ? 'Skjul' : ''}</span></div>
+
+      <div className={ sendToFilter.isToggleOn ? 'filter' : 'filterClosed'}>
+        <div className="skjult" onClick={() => closeFromFilter(false)}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div>
+      
         <div className="firstSection">
           <h2>Find program!</h2>
           <span><input type="text" placeholder="Hvad leder du efter…"/><img src={require('./images/search.svg')} alt=""/></span>
