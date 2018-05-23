@@ -21,9 +21,10 @@
       font-size: 36px;
       color: #ffffff;
       max-width: 150px;
-      margin-top: 0; }
+      margin-top: 0;
+      font-weight: 600; }
     .filter .firstSection span {
-      width: 900px;
+      width: 920px;
       height: 55px;
       background-color: #ffffff;
       border-left: 11px solid #FED324;
@@ -46,6 +47,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .filter .secoundSection .namefilter {
+      border-left: 11px solid #FED324;
+      background-color: #262626; }
     .filter .secoundSection h3 {
       color: #ffffff;
       font-weight: 600; }
@@ -64,20 +68,36 @@
       .filter .secoundSection li:hover {
         border-left: 11px solid #FED324;
         background-color: #262626; }
-    .filter .secoundSection label {
+    .filter .secoundSection input[type="checkbox"] {
+      display: none; }
+    .filter .secoundSection input[type="checkbox"] + label {
       color: white;
-      margin-top: 5px;
-      margin-bottom: 5px; }
+      margin-bottom: 20px; }
+    .filter .secoundSection input[type="checkbox"] + label span {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      margin: -2px 10px 0 0;
+      vertical-align: middle;
+      background: url(./images/check_radio_sheet.png) left top no-repeat;
+      cursor: pointer; }
+    .filter .secoundSection input[type="checkbox"]:checked + label span {
+      background: url(./images/check_radio_sheet.png) -19px top no-repeat; }
     .filter .secoundSection .row {
       display: flex;
       flex-direction: row; }
     .filter .secoundSection .column {
       display: flex;
       flex-direction: column; }
+    .filter .secoundSection .firstColumn {
+      padding-right: 30px; }
     .filter .secoundSection .type-unsertext {
-      width: 270px; }
+      width: 320px; }
       .filter .secoundSection .type-unsertext .row {
         justify-content: space-between; }
+    .filter .secoundSection .slider {
+      width: 320px;
+      margin-top: 20px; }
   .filter button {
     position: absolute;
     right: 90px;

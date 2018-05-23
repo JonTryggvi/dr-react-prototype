@@ -26,12 +26,12 @@ class Sidebar extends Component {
             <h2>Katrín Sigurðardóttir</h2>
             <div className="follow">
               <div className="follow-item">
-                <p>følger</p>
-                <strong>56</strong>
+                <p>Følger</p>
+                <span className="followCount">56</span>
               </div>
               <div className="follow-item">
-                <p>følgere</p>
-                <strong>128</strong>
+                <p>Følgere</p>
+                <span className="followCount">128</span>
               </div>
             </div>
           </div>
