@@ -37,6 +37,8 @@ header {
     header .header-inner .btn-log-ud {
       background-color: #000000; }
     header .header-inner .btn-log-search {
+          display: flex;
+    justify-content: center;
       min-width: 80px; }
 
 .nav {
