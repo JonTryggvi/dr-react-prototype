@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import MainButton from '../../components/main-button/main-button';
 import { Link } from 'react-router-dom';
 import './programmes.css';
 
 class Programmes extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = this.props;
+    // This binding is necessary to make `this` work in the callback
+     
+
+  }
   render() {
-    let iWorkTo = (message) => console.log(message);
+    const { senddata } = this.props;
+
+    console.log(this.state);
+    
     return (
       <div className="programmes-container">
       <Link to="/programme"><img src={require('./images/screenContent2.jpg')} alt=""/></Link>
-        {/* <MainButton onPress={() => iWorkTo('i work as well')} buttonText={'This is my home button'} /> */}
+        
       </div>
     )
   }

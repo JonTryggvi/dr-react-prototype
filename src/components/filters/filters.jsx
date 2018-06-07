@@ -7,7 +7,7 @@ class Filters extends Component {
     super(props);
     this.state = this.props;
     
-    console.log(this.state);
+    // console.log(this.state);
     
     // This binding is necessary to make `this` work in the callback
     this.filterClick = this.handleClick.bind(this);
@@ -18,14 +18,13 @@ class Filters extends Component {
       isToggleOn: false
     });
 
-    // this.sendToFilter.isToggleOn = false; 
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   render() {
     const { sendToFilter, closeFromFilter } = this.props;
     
-    // console.log(sendToFilter);
+    
     
     return (
 

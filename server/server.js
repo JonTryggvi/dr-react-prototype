@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
 app.get('/api/trailer/:id', function (req, res) {
   try {
     const trailerId = req.params.id 
-    const stmt = 'SELECT url FROM content WHERE id = ?'
+    const stmt = 'SELECT url, vid_id, title FROM content WHERE id = ?'
     db.all(stmt, trailerId, function (err, jRow) {
       if (err) {
         console.log('Could not get trailer from database -> ' + err)
