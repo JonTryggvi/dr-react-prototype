@@ -7,6 +7,7 @@
   padding: 80px;
   position: relative;
   .skjult{
+    cursor: pointer;
     color: white;
     text-transform: uppercase;
     position: absolute;
@@ -27,7 +28,8 @@
       font-weight: 600;
     }
     span{
-      width: 920px;
+      max-width: 920px;
+      width: 75%;
       height: 55px;
       background-color: #ffffff;
       border-left: 11px solid #FED324;
@@ -67,6 +69,7 @@
       padding-left: 0;
     }
     li{
+      cursor: pointer;
       width: 180px;
       height: 55px;
       padding-left: 28px;

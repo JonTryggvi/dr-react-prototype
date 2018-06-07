@@ -43,6 +43,7 @@ header {
     header .header-inner .btn-log-ud {
       background-color: #000000; }
     header .header-inner .btn-log-search {
+      cursor: pointer;
       min-width: 80px;
       height: 80px; }
       header .header-inner .btn-log-search a {
