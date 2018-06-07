@@ -12,10 +12,7 @@ class Programmes extends Component {
 
   }
   render() {
-    const { senddata } = this.props;
-
-    console.log(this.state);
-    
+   
     return (
       <div className="programmes-container">
       <Link to="/programme"><img src={require('./images/screenContent2.jpg')} alt=""/></Link>
