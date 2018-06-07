@@ -23,14 +23,14 @@ class App extends Component {
     this.filterclose = this.filterClick.bind(this);
   }
 
-   headerClick(dataFromChild) {
+   headerClick() {
       // console.log(dataFromChild);
      this.setState(prevState => ({
        isToggleOn: !prevState.isToggleOn
      }));
 
    }
-  filterClick(dataFromChild) {
+  filterClick() {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
@@ -46,15 +46,17 @@ class App extends Component {
     }).then(data => {
         if (data.ok) {
           data.json().then(json => {
+            console.log(json);
+            
             this.setState({ hits: json })
           })
         }
       });
     } 
     
+   
+
   render() {
-    // console.log(this.props);
-    
     
     return (
       <div className="app-container">
@@ -67,9 +69,10 @@ class App extends Component {
           <Sidebar />
           <Switch>
             <Route exact path="/" component={Home} />
+            
             <Route exact path="/programmes" component={Programmes} />
-            <Route sendToProgrammes={this.sendurl} exact path="/programme" component={Programme} />
-            <Route path="/video" component={Video} />
+            <Route exact path="/programme" component={() => <Programme vids={this.state.hits} />} />
+           
           </Switch>
         </div>
         <Footer />

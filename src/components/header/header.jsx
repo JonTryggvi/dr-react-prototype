@@ -5,19 +5,17 @@ import './header.css';
 class Header extends Component {
   constructor(props) {
     super(props);
-  
+    this.state = this.props;
   }
   render() {
     const { callbackFromParent } = this.props;
-    // console.log(this.props);
-    
     return (
       <header>
         <div className="header-inner">
           <Link className="logo-link" to="/"> <img src={require('./drTvLogo.png')} alt=""/> </Link>
           <nav className="navbar navbar-light">
             <ul className="nav navbar-nav">
-              <li><Link to="/programmes">programmes</Link></li>
+              <li><Link to="/programmes/">programmes</Link></li>
               <li><Link to="/">Live-TV</Link></li>
               <li><Link to="/">TV-Guide</Link></li>
               <li><Link to="/">Nyt</Link></li>

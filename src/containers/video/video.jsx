@@ -1,57 +1,54 @@
-import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import MainButton from '../../components/main-button/main-button';
+import React, { Component } from 'react';
+import YouTube from 'react-youtube';  
 import './video.css';
 
 
 
+class Video extends Component {
+  constructor(props) {
+    super(props);
+    this.state = this.props;
+    // This binding is necessary to make `this` work in the callback
+    // this.filterClick = this.handleClick.bind(this);
+    // console.log(this.state);
 
-const Video = ({ match, dataFromApp }) => {
-  // console.log(match);
-  let arr = [];
- let tst = fetch('http://localhost:1981/api/trailer/1', {
-    method: 'GET', headers: {
-      'Accept': 'application/json'
-
-    }
-  }).then(data => {
-    if (data.ok) {
-      return data.json().then(json => {
-        
-        arr = arr.push(json)
-        return arr
-      })
-     
-    }
-   });
-  console.log(arr);
-  
-  
-  let btnOnClickFunction = function(message) {
-    console.log(message);
-    
   }
   
-  
-   
-  return (
-    <div className="video-container">
-      <h1>Video</h1>
+  render() {
 
-      <MainButton onPress={() => btnOnClickFunction('i work')} buttonText={'This is my button'} />
+    // let iWorkTo = (message) => console.log(message);
+    const  {sendToProgrammes}  = this.state;
+    console.log(sendToProgrammes);
+    if (sendToProgrammes.vids.length > 0) {
+      localStorage.vidId = sendToProgrammes.vids[0].vid_id;
+      var vidId = sendToProgrammes.vids[0].vid_id ? sendToProgrammes.vids[0].vid_id : localStorage.vidId;
+      var vidTitle = sendToProgrammes.vids[0].title;
+    }
 
+    // console.log(vidId);
+    
+    const opts = {
+      // height: '100%',
+      // width: '100',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+      }
+    };
 
-      <ul>
-
-        <li><Link to={`${match.url}/someVid1`}>vid 1</Link></li>
-        <li><Link to={`${match.url}/someVid2`}>vid 2</Link></li>
-        <li><Link to={`${match.url}/someVid3`}>vid 3</Link></li>
-
-      </ul>
-        <Route path={`${match.path}/:name`} render={({ match }) => (<div> <h3> {match.params.name} </h3></div>)} />
-    </div>
-  )
+    return (
+      <div className="vidSectionContainer">
+        <YouTube videoId={vidId} opts={opts} onReady={this._onReady}  />
+        <h1>{vidTitle}</h1>
+      </div>
+          
+    )
+  }
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 }
+
 
 
 export default Video; 

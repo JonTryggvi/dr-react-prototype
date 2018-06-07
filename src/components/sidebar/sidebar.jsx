@@ -22,7 +22,7 @@ class Sidebar extends Component {
         <div className="skjult-menu" onClick={this.handleClick}><span>{this.state.isToggleOn ? 'Skjul menu' : 'Åben menu'}</span><img src={require('./images/closeMenu.png')} alt=""/></div>
         <div className={this.state.isToggleOn ? 'showContent' : 'hideContent'}>
           <div className="user-info">
-            <img src={require('./images/user.png')} alt="user picture"/>
+            <img src={require('./images/user.png')} alt="user"/>
             <h2>Katrín Sigurðardóttir</h2>
             <div className="follow">
               <div className="follow-item">
