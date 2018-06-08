@@ -8,10 +8,8 @@ import Sidebar from './components/sidebar/sidebar';
 import Home from './containers/home/home';
 import Programmes from './containers/programmes/programmes';
 import Programme from './containers/programme/programme';
-import Video from './containers/video/video';
 
 class App extends Component {
-
 
   constructor(props) {
     super(props);

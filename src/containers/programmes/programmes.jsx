@@ -15,7 +15,7 @@ class Programmes extends Component {
    
     return (
       <div className="programmes-container">
-      <Link to="/programme"><img src={require('./images/screenContent2.jpg')} alt=""/></Link>
+      <Link className="testClick" to="/programme"><img src={require('./images/screenContent2.jpg')} alt=""/></Link>
         
       </div>
     )
