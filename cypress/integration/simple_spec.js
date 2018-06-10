@@ -1,6 +1,6 @@
 //To start cypress type: npx cypress open 
 
-describe('My First Test', function () {
+describe('We browse our prototype', function () {
   it('Visits the wanders throught the site', function () {
     cy.visit('http://localhost:3000')
     cy.get('.testProgrammes')

@@ -8,7 +8,9 @@ class Header extends Component {
     this.state = this.props;
   }
   render() {
-    const { callbackFromParent } = this.props;
+    /* here we have this wonderful deconstructing syntax again as described in the filter component */
+    const { callbackFromParent, sendToFilter } = this.props;
+    
     return (
       <header>
         <div className="header-inner">
@@ -21,7 +23,8 @@ class Header extends Component {
               <li><Link to="/">Nyt</Link></li>
               <li><Link to="/">Populært</Link></li>
               <li className="btn-log-ud"><Link to="/log-ud">Log ud</Link></li>
-              <li className="btn-log-search" onClick={() => callbackFromParent(true)}><a><img src={require('./search.svg')} alt=""/></a></li>
+              {/*  here we are wer are doing the same as in the Filter. we are calling a funciton in the app component switching the isToggled key from true to false */ }
+              <li className={sendToFilter ? 'btn-log-search btnActive' : 'btn-log-search' } onClick={() => callbackFromParent()}><a><img src={sendToFilter ? require('./cancel.svg') : require('./search.svg')} alt=""/></a></li>
             </ul>
           </nav>
         </div>  

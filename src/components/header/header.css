@@ -45,6 +45,12 @@ header {
     header .header-inner .btn-log-search {
       cursor: pointer;
       min-width: 80px;
-      height: 80px; }
+      height: 80px;
+      transition: all 300ms ease; }
       header .header-inner .btn-log-search a {
         height: 80px; }
+    header .header-inner .btnActive {
+      background-color: #FED324; }
+      header .header-inner .btnActive img {
+        width: 25%;
+        height: 25%; }
