@@ -53,9 +53,17 @@ header {
       cursor: pointer;
       min-width: 80px;
       height: 80px;
+      transition: all 300ms ease;
       a {
         height: 80px;
       }
-  }
+    }
+    .btnActive {
+      background-color: #FED324;
+      img {
+        width: 25%;
+        height: 25%;
+      }
+    }
   }
 }

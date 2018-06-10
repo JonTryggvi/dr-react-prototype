@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Video from '../video/video';
-// import MainButton from '../../components/main-button/main-button';
 import './programme.css';
-
-import { Link } from 'react-router-dom';
-
 
 class Programme extends Component {
   constructor(props) {

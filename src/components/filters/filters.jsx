@@ -5,15 +5,15 @@ import MainButton from '../../components/main-button/main-button';
 class Filters extends Component {
   constructor(props) {
     super(props);
+    // we set the state to equal the props because we are going to modify it in a functio below with the setState methood
     this.state = this.props;
-    
     // console.log(this.state);
     
     // This binding is necessary to make `this` work in the callback
-    this.filterClick = this.handleClick.bind(this);
+    this.filterClick = this.handleFilterClick.bind(this);
   }
-
-  handleClick() {
+//  we define clickable function
+  handleFilterClick() {
     this.setState({
       isToggleOn: false
     });
@@ -22,14 +22,13 @@ class Filters extends Component {
   }
 
   render() {
+    /* Interesting syntax!! Her we use a so called deconstruction syntax to deconstruct this.props (which is a jsonOBJ) into the variables sendToFilter and closeFromFilter. Its much shorter than writing fx. const sendToFilter = this.props.sendToFilter and then in a nother line const closeFromFilter = this.props.closeFromFilter https://wesbos.com/destructuring-objects/ */
     const { sendToFilter, closeFromFilter } = this.props;
     
-    
-    
     return (
-
+      /* here we use check on isToggleOn, Since it is a boolean we can use the ternary operator to deside what class to render in the className attribute. */
       <div className={ sendToFilter.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={() => closeFromFilter(false)}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div>
+        <div className="skjult" onClick={() => closeFromFilter()}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div>
       
         <div className="firstSection">
           <h2>Find program!</h2>
@@ -147,7 +146,8 @@ class Filters extends Component {
             
           
         </div>
-        <MainButton onPress={()=>closeFromFilter(false)}  buttonText={<Link to="/programmes">Find nu</Link>} />
+        {/* The MainButton component takes two attributes, the onPress for any function it needs to execute and the buttonText for well the button text. Here we are sneaking in a Link element into the button text which means that we  will have an anchor attribuite in our button in the DOM. That isn't a very good practise but for now we let it fe for this prototype */}
+        <MainButton onPress={() => closeFromFilter()} buttonText={<Link to="/programmes">Find nu</Link>} />
       </div>      
 
     )
