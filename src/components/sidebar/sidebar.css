@@ -12,7 +12,8 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     .sidebar-container-small .skjult-menu img {
       margin-left: 10px;
       -webkit-transform: rotate(-180deg);
@@ -41,13 +42,14 @@
     text-decoration: none;
     text-transform: uppercase;
     float: right;
-    margin: 15px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     .sidebar-container .skjult-menu img {
       margin-left: 10px; }
     .sidebar-container .skjult-menu span {
-      font-weight: 600; }
+      font-weight: 600;
+      letter-spacing: 0.0625em; }
   .sidebar-container .user-info {
     width: 100%;
     margin-top: 30px; }
@@ -56,10 +58,10 @@
       margin-left: 85px; }
     .sidebar-container .user-info h2 {
       color: #ffffff;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       text-align: center;
-      line-height: 0; }
+      line-height: 1; }
     .sidebar-container .user-info .follow {
       display: flex;
       margin-bottom: 20px;
@@ -73,7 +75,9 @@
         justify-content: center;
         flex-direction: column; }
         .sidebar-container .user-info .follow .follow-item p {
-          color: #949494; }
+          color: #a9a9a9;
+          letter-spacing: 0.0625em;
+          font-size: 14px; }
         .sidebar-container .user-info .follow .follow-item span .followCount {
           font-weight: 600;
           font-size: 26px; }
@@ -110,7 +114,8 @@
         text-decoration: none;
         color: #ffffff;
         margin-left: 28px;
-        display: flex; }
+        display: flex;
+        align-items: center; }
         .sidebar-container .section .section-list li a img {
           margin-right: 20px; }
   .sidebar-container .ny {
