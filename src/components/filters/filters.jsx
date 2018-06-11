@@ -12,7 +12,7 @@ class Filters extends Component {
     // This binding is necessary to make `this` work in the callback
     this.filterClick = this.handleFilterClick.bind(this);
   }
-//  we define clickable function
+//  we define click-able function
   handleFilterClick() {
     this.setState({
       isToggleOn: false
@@ -28,7 +28,7 @@ class Filters extends Component {
     return (
       /* here we use check on isToggleOn, Since it is a boolean we can use the ternary operator to deside what class to render in the className attribute. */
       <div className={ sendToFilter.isToggleOn ? 'filter' : 'filterClosed'}>
-        <div className="skjult" onClick={() => closeFromFilter()}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div>
+        {/* <div className="skjult" onClick={() => closeFromFilter()}><span>{sendToFilter.isToggleOn ? 'Skjult' : ''}</span></div> */}
       
         <div className="firstSection">
           <h2>Find program!</h2>

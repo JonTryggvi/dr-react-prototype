@@ -34,7 +34,7 @@ class App extends Component {
       isToggleOn: !prevState.isToggleOn
     }));
   }
-  // is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request. https://reactjs.org/docs/react-component.html
+  // componentDidMount is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request. https://reactjs.org/docs/react-component.html
   componentDidMount() {
     // here we make use of the fetch method to call our API for the database. The fetch method is a promise based method and has the great plus side that it doesnt provoke a CORS action from the browser. It also makes a cleaner more readable code instead of the calback hell that can occour
     fetch('http://localhost:1981/api/trailer/1', {
@@ -63,7 +63,7 @@ class App extends Component {
         <div className="view-container">
           
           <Sidebar />
-          {/* the Switch is imported from the react-router-dom module and with it we can create a path and link it to a component. Note that we can also send data to the component in a function that executes when a route is selected eg.a the Programme Route */}
+          {/* the Switch is imported from the react-router-dom module and with it we can create a path and link it to a component. Note that we can also send data to the component in a function that executes when a route is selected e.g. the Programme Route */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/programmes" component={Programmes} />
