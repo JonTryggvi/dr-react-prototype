@@ -12,7 +12,7 @@ class Filters extends Component {
     // This binding is necessary to make `this` work in the callback
     this.filterClick = this.handleFilterClick.bind(this);
   }
-//  we define clickable function
+//  we define click-able function
   handleFilterClick() {
     this.setState({
       isToggleOn: false

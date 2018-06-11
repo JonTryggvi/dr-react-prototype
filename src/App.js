@@ -63,7 +63,7 @@ class App extends Component {
         <div className="view-container">
           
           <Sidebar />
-          {/* the Switch is imported from the react-router-dom module and with it we can create a path and link it to a component. Note that we can also send data to the component in a function that executes when a route is selected eg.a the Programme Route */}
+          {/* the Switch is imported from the react-router-dom module and with it we can create a path and link it to a component. Note that we can also send data to the component in a function that executes when a route is selected e.g. the Programme Route */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/programmes" component={Programmes} />
