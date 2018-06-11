@@ -75,8 +75,12 @@
     .filter .secoundSection input[type="checkbox"] {
       display: none; }
     .filter .secoundSection input[type="checkbox"] + label {
+      font-size: 14px;
+      letter-spacing: 0.25px;
       color: white;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center; }
     .filter .secoundSection input[type="checkbox"] + label span {
       display: inline-block;
       width: 19px;

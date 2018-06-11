@@ -99,8 +99,13 @@
       }
 
       input[type="checkbox"] + label {
+         font-size: 14px;
+        // font-weight: 300;
+        letter-spacing: 0.25px;
         color: white;
         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
       }
 
       input[type="checkbox"] + label span {
