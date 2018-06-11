@@ -126,12 +126,15 @@
         }
       }
       li a{
+        display: flex;
+        align-items: center;
         font-size: 16px;
         font-weight: 400;
         text-decoration: none;
         color: #ffffff;
         margin-left: 28px;
-        display: flex;
+        height: 100%;
+        width: 100%;
         img{
           margin-right: 20px;
         }

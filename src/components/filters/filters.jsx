@@ -51,6 +51,9 @@ class Filters extends Component {
                   <input id="c1" type="checkbox" name="drama" value="drama" />
                 <label htmlFor="c1"><span></span>Drama</label>
 
+                <input id="c14" type="checkbox" name="documentar" value="documentar" />
+                <label htmlFor="c14"><span></span>Documentar</label>
+
                   <input id="c2" type="checkbox" name="kultur" value="kultur" />
                 <label htmlFor="c2"><span></span>Kultur</label>
 
