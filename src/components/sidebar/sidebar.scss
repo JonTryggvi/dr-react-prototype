@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
     img{
       margin-left: 10px;
       transform: rotate(-180deg);
@@ -46,14 +47,16 @@
       text-decoration: none;
       text-transform: uppercase;
       float: right;
-      margin: 15px;
+      // margin: 15px;
       display: flex;
       align-items: center;
+      cursor: pointer;
       img{
         margin-left: 10px;
       }
       span{
         font-weight: 600;
+        letter-spacing: 0.0625em;
       }
     }
   .user-info{
@@ -65,10 +68,10 @@
     }
     h2{
       color: #ffffff;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       text-align: center;
-      line-height: 0;
+      line-height: 1;
     }
     .follow{
       display: flex;
@@ -83,7 +86,9 @@
         justify-content: center;
         flex-direction: column;
         p {
-          color: #949494;
+          color: #a9a9a9;
+          letter-spacing: 0.0625em;
+          font-size: 14px;
         }
         span .followCount {
           font-weight: 600;
@@ -133,6 +138,8 @@
         text-decoration: none;
         color: #ffffff;
         margin-left: 28px;
+        display: flex;
+        align-items: center;
         height: 100%;
         width: 100%;
         img{
