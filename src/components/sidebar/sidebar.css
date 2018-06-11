@@ -111,6 +111,8 @@
           .sidebar-container .section .section-list li:hover .sidebarIcon {
             display: none; }
       .sidebar-container .section .section-list li a {
+        display: flex;
+        align-items: center;
         font-size: 16px;
         font-weight: 400;
         text-decoration: none;
@@ -118,6 +120,9 @@
         margin-left: 28px;
         display: flex;
         align-items: center; }
+        height: 100%;
+        width: 100%; }
+
         .sidebar-container .section .section-list li a img {
           margin-right: 20px; }
   .sidebar-container .ny {
